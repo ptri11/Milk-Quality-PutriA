@@ -29,9 +29,9 @@ if st.button('Test Prediksi'):
     milk_prediction = milk_model.predict([[pH, Temprature, Taste, Odor, Fat, Turbidity, Colour]])
     if(milk_prediction[0] == 0):
        milk_diagnosis ='low'
-elif(milk_prediction[0]==1):
+    elif(milk_prediction[0]==1):
         milk_diagnosis ='medium'
-else :
+    else :
         milk_diagnosis ='high'
 
 st.success(milk_diagnosis)
